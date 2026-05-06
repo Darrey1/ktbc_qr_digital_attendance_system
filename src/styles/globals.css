@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --ktbc-primary: #1A1F5E;
+  --ktbc-secondary: #F5A623;
+  --ktbc-accent: #00C9B1;
+  --ktbc-bg: #F8F9FF;
+  --ktbc-dark: #0D0F2B;
+  --ktbc-text: #1C1C2E;
+}
+
+/* Dark theme variables */
+:root[data-theme='dark']{
+  --ktbc-bg: #0D0F2B;
+  --ktbc-text: #F8FAFF;
+  --ktbc-primary: #0B1538;
+}
+
+/* Background choices: offwhite, white, dark. Controlled by data-bg attribute */
+:root[data-bg='offwhite']{
+  --page-bg: var(--ktbc-bg);
+  --card-bg: rgba(255,255,255,0.6);
+  --muted-text: #6B7280;
+}
+:root[data-bg='white']{
+  --page-bg: #FFFFFF;
+  --card-bg: rgba(250,250,250,0.8);
+  --muted-text: #6B7280;
+}
+:root[data-bg='dark']{
+  --page-bg: #07071a;
+  --card-bg: rgba(10,12,30,0.6);
+  --muted-text: #9CA3AF;
+}
+
+body{ background-color: var(--page-bg); color: var(--ktbc-text) }
+
+/* Adaptive button styles that respond to theme/bg */
+.ktbc-btn-primary{ background-color: var(--ktbc-secondary); color: var(--ktbc-dark); }
+.ktbc-btn-secondary{ border: 2px solid var(--ktbc-accent); color: var(--ktbc-accent); background: transparent }
+
+
+html { font-family: var(--font-body, system-ui); }
+
+/* Fluid type */
+h1 { font-size: clamp(1.75rem, 2.2vw + 1rem, 3rem); }
+h2 { font-size: clamp(1.25rem, 1.6vw + .75rem, 2rem); }
+p, input, button { font-size: clamp(.9rem, .5vw + .9rem, 1rem); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Simple hero diagonal */
+.hero-diagonal{
+  background: linear-gradient(120deg, var(--ktbc-primary) 50%, var(--ktbc-bg) 50%);
+}
+
+.glass-card{ backdrop-filter: blur(8px); background-color: rgba(255,255,255,0.6); }
+
+.ktbc-btn-primary{
+  background-color: var(--ktbc-secondary);
+  color: var(--ktbc-dark);
+  min-height:44px; display:inline-flex; align-items:center; justify-content:center; font-weight:600;
+}
+.ktbc-btn-primary:disabled{ opacity:0.5; transform:none }
+.ktbc-btn-primary:hover{ transform:scale(1.02); box-shadow:0 8px 24px rgba(245,166,35,0.14) }
+.ktbc-btn-secondary{
+  border: 2px solid var(--ktbc-accent);
+  color: var(--ktbc-accent);
+  min-height:44px; display:inline-flex; align-items:center; justify-content:center; font-weight:600;
+}
+
+/* Footer responsive */
+.footer-links a{ color:var(--ktbc-text); }
+
