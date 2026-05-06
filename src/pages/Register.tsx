@@ -163,7 +163,7 @@ export default function Register() {
               <input
                 {...register("fullName")}
                 placeholder="e.g. Dare Adeyemi"
-                className="w-full border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full h-10 border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
               {errors.fullName && (
                 <p className="text-xs text-red-500 mt-1">
@@ -179,7 +179,7 @@ export default function Register() {
               <input
                 type="date"
                 {...register("dob")}
-                className="w-full border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full h-10 border bg-bg/30 px-3 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary box-border appearance-none"
               />
               {errors.dob && (
                 <p className="text-xs text-red-500 mt-1">
@@ -192,7 +192,7 @@ export default function Register() {
               <label className="block text-sm font-medium mb-1">Gender</label>
               <select
                 {...register("gender")}
-                className="w-full border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full h-10 border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="">Select gender</option>
                 <option value="male">Male</option>
@@ -213,7 +213,7 @@ export default function Register() {
               <input
                 {...register("phone")}
                 placeholder="+234 800 000 0000"
-                className="w-full border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full h-10 border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
               {errors.phone && (
                 <p className="text-xs text-red-500 mt-1">
@@ -229,7 +229,7 @@ export default function Register() {
               <input
                 {...register("email")}
                 placeholder="you@example.com"
-                className="w-full border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full h-10 border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
               {errors.email && (
                 <p className="text-xs text-red-500 mt-1">
@@ -242,7 +242,7 @@ export default function Register() {
               <label className="block text-sm font-medium mb-1">Category</label>
               <select
                 {...register("category")}
-                className="w-full border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full h-10 border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
               >
                 <option value="">Select category</option>
                 <option value="delegate">Delegate</option>
@@ -282,7 +282,7 @@ export default function Register() {
                   <input
                     {...register("parentName")}
                     placeholder="e.g. Mr. John Adeyemi"
-                    className="w-full border border-white/10 bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full h-10 border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
@@ -293,7 +293,7 @@ export default function Register() {
                   <input
                     {...register("parentPhone")}
                     placeholder="+234 800 000 0000"
-                    className="w-full border border-white/10 bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full h-10 border bg-bg/30 p-2.5 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
 
